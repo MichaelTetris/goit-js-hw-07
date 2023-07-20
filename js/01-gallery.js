@@ -3,7 +3,7 @@ import { galleryItems } from "./gallery-items.js";
 
 console.log(galleryItems);
 const galleryEl = document.querySelector(".gallery");
-console.log(galleryEl);
+
 
 const galleryList = galleryItems
   .map(
@@ -46,5 +46,6 @@ galleryEl.onclick = (event) => {
          return;
      } 
           instance.close();
+          
   }
 }
