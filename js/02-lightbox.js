@@ -8,10 +8,10 @@ const galleryEl = document.querySelector(".gallery");
 const galleryList = galleryItems
   .map(
     ({ preview, original, description }) => `
-<li class="item-gallery">
-    <a class="gallery-link" href="${original}">
+<li class="gallery__item">
+    <a class="gallery__link" href="${original}">
       <img
-      class="gallery-img"
+      class="gallery__image"
       src="${preview}"
       data-source="${original}"
       alt="${description}"
@@ -23,7 +23,7 @@ const galleryList = galleryItems
 
 galleryEl.insertAdjacentHTML("afterbegin", galleryList);
 
-new SimpleLightbox('.gallery a', {
-  captionData: 'alt',
+const lightbox = new SimpleLightbox(".gallery a", {
+  captionsData: "alt",
   captionDelay: 250,
 });

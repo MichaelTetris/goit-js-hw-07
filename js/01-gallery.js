@@ -30,7 +30,7 @@ galleryEl.onclick = (event) => {
   event.preventDefault();
   
   const instance = basicLightbox.create(`
-  <img width="800" height="600" src="${event.target.dataset.source}">
+  <img width="1000" height="600" src="${event.target.dataset.source}">
 `, {
       onShow: () => {
           document.addEventListener('keydown', closeModal);
